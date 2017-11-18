@@ -4,18 +4,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyLinkedList list = new MyLinkedList(null);
-        list.traverse(list.getRoot());
+        SearchTree tree = new SearchTree((ListItem) null);
+        tree.traverse(tree.getRoot());
 
-        String stringData = "5 7 3 9 8 2 1 0 4 6";
+      //  String stringData = "5 7 3 9 8 2 1 0 4 6";
+
+        String stringData = "Dawrin Brisbane Perth Melbourne Canberra Adelaide Sydney";
 
         String[] data = stringData.split(" ");
         for(String s : data){
-            list.addItem(new Node(s));
+            tree.addItem(new Node(s));
         }
-        list.traverse(list.getRoot());
 
-        list.removeItem(new Node("10"));
-        list.traverse(list.getRoot());
+
+        tree.traverse(tree.getRoot());
+
+        /*searchTree.removeItem(new Node("3"));
+        searchTree.traverse(searchTree.getRoot());
+
+        searchTree.removeItem(new Node("0"));
+        searchTree.traverse(searchTree.getRoot());*/
     }
 }
